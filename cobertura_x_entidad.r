@@ -52,4 +52,4 @@ df_cobertura_separada <- df_cobertura |>
 df_cobertura_separada <- df_cobertura_separada |> distinct(servicio, concesionario, entidad)
 
 # guardamos base
-write_excel_csv(df_separada, "cobertura_internet.csv")
+write_excel_csv(df_cobertura_separada, "cobertura_separada.csv")
