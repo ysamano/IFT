@@ -21,7 +21,6 @@ base <- readxl::read_excel("base.xlsx", .name_repair = janitor::make_clean_names
 # seleccionamos solo las variables que nos interesan
 df_selected <- base |>
   mutate(servicio = tipo_servicio(flag_telefonia, flag_tv_paga, flag_internet)) |>
-  #filter(servicio == "internet") |>
   select(servicio, concesionario = nombre_comercial, coberturas)
 
 # Verifiacmos que concesionarios tiene cobertura Nacional
